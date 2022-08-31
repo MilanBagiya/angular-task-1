@@ -1,0 +1,50 @@
+<div class="container">
+    <form role="form" [formGroup]="editForm">
+        <div class="mb-3">
+            <div class="card-header text-center">
+                <h2>Edit User Profile</h2>
+            </div>
+            <div class="row">
+                <div class="col-6 col-sm-12 col-md-6">
+                    <div class="card-body table-responsive">
+                        <fieldset class="form-group">
+                            <label>Name</label>
+                            <input type="text" class="form-control" formControlName="name" />
+                        </fieldset>
+                        <fieldset class="form-group">
+                            <label>Salary</label>
+                            <input type="number" class="form-control" formControlName="salary" />
+                        </fieldset>
+                        <fieldset class="form-group">
+                            <label>Age</label>
+                            <input type="number" class="form-control" formControlName="age" />
+                        </fieldset>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-12 col-md-6">
+                    <div class="card-body table-responsive">
+                        <fieldset class="form-group">
+                            <label>Email</label>
+                            <input type="text" class="form-control" formControlName="email" />
+                        </fieldset>
+                        <fieldset class="form-group">
+                            <label>Country</label>
+                            <input type="text" class="form-control" formControlName="country" />
+                        </fieldset>
+                        <fieldset class="form-group">
+                            <label>Avatar</label>
+                            <input type="file" class="form-control" formControlName="avatar" />
+                        </fieldset>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 d-flex justify-content-between">
+                    <button class="btn btn-danger m-4" type="submit" (click)="close()">Cancel</button>
+                    <button class="btn btn-success m-4" type="submit" (click)="save()"
+                        [disabled]="!editForm.valid">Save</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

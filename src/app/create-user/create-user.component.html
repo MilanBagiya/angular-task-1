@@ -1,0 +1,59 @@
+<div class="container">
+    <form role="form" [formGroup]="userForm">
+        <div class="card mb-3">
+            <div class="card-header text-center">
+                <h2>Create New User</h2>
+            </div>
+            <div class="row">
+                <div class="col-6 col-sm-12 col-md-6">
+                    <div class="card-body table-responsive">
+                        <fieldset class="form-group">
+                            <label>Name</label>
+                            <input type="text" class="form-control" formControlName="name" />
+                        </fieldset>
+                        <fieldset class="form-group">
+                            <label>Salary</label>
+                            <input type="number" class="form-control" formControlName="salary" />
+                        </fieldset>
+                        <fieldset class="form-group">
+                            <label>Age</label>
+                            <input type="number" class="form-control" formControlName="age" />
+                        </fieldset>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-12 col-md-6">
+                    <div class="card-body table-responsive">
+                        <fieldset class="form-group">
+                            <label>Email</label>
+                            <input type="text" class="form-control" formControlName="email" />
+                        </fieldset>
+                        <fieldset class="form-group">
+                            <label>Country</label>
+                            <input type="text" class="form-control" formControlName="country" />
+                        </fieldset>
+                        <fieldset class="form-group">
+                            <label>Avatar</label>
+                            <input type="file" class="form-control" formControlName="avatar" />
+                        </fieldset>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 d-flex justify-content-end">
+                    <button class="btn btn-success m-4" type="submit" (click)="saveUserDetails()"
+                        [disabled]="!userForm.valid">Save Details</button>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <!--
+        NOTE: Dummy Api does not have email,avatar, and country fields. so that i've added static fields -->
+
+    <div class="note_wrapper"><strong>Note:</strong>
+        <span>
+            Email, Avatar, And Country fields are not using for below API's Payload, so that i've added static fields.
+        </span>
+    </div>
+
+</div>
