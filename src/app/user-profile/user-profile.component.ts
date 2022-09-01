@@ -25,12 +25,10 @@ export class UserProfileComponent implements OnInit, OnDestroy {
   }
 
   getUserList() {
-    debugger
     this.subs.add(
       this.apiService.getUserList()
         .subscribe((user: ICommonResponseModel<IuserModel[]>) => {
           if (user.status) {
-            debugger
             this.userList = user.data;
             this.statusService.suceessStatus(user.message ? user.message : '');
           }
