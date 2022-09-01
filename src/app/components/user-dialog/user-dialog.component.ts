@@ -2,8 +2,8 @@ import { Component, Inject, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { Subscription } from 'rxjs';
-import { ApiService } from '../services/api.service';
-import { StatusService } from '../services/status.service';
+import { ApiService } from '../../services/api.service';
+import { StatusService } from '../../services/status.service';
 
 @Component({
   selector: 'app-user-dialog',
@@ -58,6 +58,10 @@ export class UserDialogComponent implements OnInit {
 
   close() {
     this.dialogRef.close();
+  }
+  
+  ngOnDestroy(): void {
+    this.subs.unsubscribe();
   }
 
 }

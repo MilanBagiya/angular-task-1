@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { MatDialogModule } from '@angular/material/dialog';
+import { SharedModule } from '../shared/shared.module';
 import { UserProfileRoutingModule } from './user-profile-routing.module';
 import { UserProfileComponent } from './user-profile.component';
 
@@ -8,7 +8,7 @@ import { UserProfileComponent } from './user-profile.component';
     imports: [
         CommonModule,
         UserProfileRoutingModule,
-        MatDialogModule
+        SharedModule
     ],
     declarations: [
         UserProfileComponent

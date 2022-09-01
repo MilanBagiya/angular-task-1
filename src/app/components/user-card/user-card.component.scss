@@ -1,0 +1,64 @@
+.img-avtar {
+    width: 32px;
+    height: 32px;
+    border-radius: 100%;
+}
+
+h2 {
+    margin: 0;
+    text-align: center;
+    color: rgb(11 72 235 / 80%);
+}
+
+.card {
+    padding: 2.5rem 2rem;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.5);
+    max-width: 35%;
+    box-shadow: 0 0 30px rgb(0 0 0 / 15%);
+    margin: 1rem auto;
+    position: relative;
+    transform-style: preserve-3d;
+    overflow: hidden;
+}
+
+.card:hover {
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    transition: all 1s ease;
+}
+
+.header-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 15px 0;
+}
+
+.link {
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    color: #000;
+    cursor: pointer;
+}
+
+.email {
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 500;
+    color: #000;
+    margin: 0;
+}
+
+.text {
+    text-transform: capitalize;
+    font-weight: 500;
+}
+
+.h5 {
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 500;
+    color: #000;
+    margin: 0;
+}

@@ -1,45 +1,4 @@
-<ng-container *ngIf="userList; else static">
-    <div class="card" *ngFor="let user of userList">
-        <div>
-            <div class="header-wrapper">
-                <img class="img-fluid img-avtar"
-                    [src]="user.profile_image  ? user.profile_image : 'https://images.unsplash.com/photo-1610216705422-caa3fcb6d158?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDB8fGZhY2V8ZW58MHwyfDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60'" />
-                <div>
-                    <h5>{{ user.employee_age | date : 'dd/MM/yyyy' }}</h5>
-                </div>
-            </div>
-            <div class="header-wrapper">
-                <a (click)="openEdit(user.id)" class="link">{{user.employee_name ? user.employee_name : 'Milan
-                    Bagiya'}}</a>
-                <h4 class="email">testUser@12mail.com</h4>
-            </div>
-            <p class="text">
-                I'm a Front End Developer, follow me to be the first
-                who see my new work.this is my Id {{user.id}}
-            </p>
-        </div>
-    </div>
-</ng-container>
-
-<ng-template #static>
-    <ng-container>
-        <div class="card">
-            <div>
-                <div class="header-wrapper">
-                    <img class="img-fluid img-avtar"
-                        [src]="'https://images.unsplash.com/photo-1610216705422-caa3fcb6d158?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDB8fGZhY2V8ZW58MHwyfDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60'" />
-                    <div>
-                        <h5>5/7/2000</h5>
-                    </div>
-                </div>
-                <div class="header-wrapper">
-                    <a (click)="openEdit(1)" class="link">Milan Bagiya</a>
-                    <h4 class="email">testUser@12mail.com</h4>
-                </div>
-                <p class="text">
-                    This is Static card API's, Response getting failed, please refresh and get user list
-                </p>
-            </div>
-        </div>
-    </ng-container>
-</ng-template>
+<app-user-card 
+    [userList]="userList" 
+    (reloadUserList)="getUserList()">
+</app-user-card>
